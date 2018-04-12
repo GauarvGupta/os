@@ -4,7 +4,7 @@ using namespace std;
 main()
 {
 char name[4]={'a','b','c','d'},sq[15];
-int ar[4]={0,2,4,13};
+int ar[4]={0,2,4,13},j=0;
 int bu[4]={18,23,13,10},time=0;
 cout<<" time interval = 3 \n";
 	for(int i=0;i<4;i++)
@@ -14,7 +14,8 @@ cout<<" time interval = 3 \n";
 			time=time+3;
 			bu[i]=bu[i]-3;
 			cout<<name[i];
-			
+			sq[j]=name[i];
+			j++;
 		}
 	}
 	
@@ -26,7 +27,8 @@ cout<<"\ntime interval =6\n";
 			time=time+6;
 			bu[i]=bu[i]-6;
 			cout<<name[i];
-			
+			sq[j]=name[i];
+			j++;
 		}
 	}
 	cout<<"\nrest of the code first come first serve \n";
@@ -37,9 +39,17 @@ cout<<"\ntime interval =6\n";
 			time=time+bu[i];
 			bu[i]=bu[i]-bu[i];
 			cout<<name[i];
-			
+			sq[j]=name[i];
+			j++;
 		}
 		
 	}
 	cout<<"\n total time consumed is :"<<time<<"\n";
+	cout<<"\n sequence \n";
+	cout<<"--------------------------";
+	cout<<"\n";
+	for(int y=0;y<j;y++)
+	{
+		cout<<"|"<<sq[y];
+	}
 }
