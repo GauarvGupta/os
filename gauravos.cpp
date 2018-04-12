@@ -3,7 +3,7 @@
 using namespace std;
 main()
 {
-	int id1=2132,id2=2102,id3=2453;
+	int id1=2132,id2=2102,id3=2453,time=0;
 	int p1=2,p2=4,p3=8,p=0;
 	cout<<"\n for student s1 id is:"<<id1<<"  process time is :"<<p1<<"\n";
 	cout<<"\n for student s2 id is:"<<id2<<"  process time is :"<<p2<<"\n";
@@ -61,6 +61,8 @@ main()
 			}
 		}
 		 cout<<p1<<" |"<<p2<<" |"<<p3<<"\n";
+		 time =time+1;
 	}
+	cout<<"\n time taken to complete all 3 processes is :"<<time;
 	cout<<"\nend of program";
 } 
