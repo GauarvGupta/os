@@ -3,15 +3,26 @@
 using namespace std;
 main()
 {
-char name[4]={'a','b','c','d'},sequence[15];
-int arrival_time[4]={0,2,4,13},j=0;
-int burst_time[4]={18,23,13,10},time=0;
-cout<<"\n process 1 - a - arraival time : 0  - burst time : 18\n process 2 - b - arraival time : 2  - burst time : 23 \n process 3 - c - arraival time : 4  - burst time : 13\n process 3 - d - arraival time : 13 - burst time : 10\n";
-
-
+char name[50],sequence[50];
+int arrival_time[50],j=0,burst_time[50],time=0,n;
+cout<<endl<<"enter the number of process";
+cin>>n;
+for(int i=0;i<n;i++)
+{
+	cout<<endl<<"enter process name(only one char) :";
+	cin>>name[i];
+	cout<<" arrival time : ";
+	cin>>arrival_time[i];
+	cout<<" burst time : ";
+	cin>>burst_time[i];
+}
+for(int i=0;i<n;i++)
+{
+    cout<<endl<<"process name : "<<name[i]<<" arrival time : "<<arrival_time[i]<<" burst time : "<<arrival_time[i];	
+}
 cout<<"\n time interval = 3 \n";
 cout<<"\n sequence \n";
-	for(int i=0;i<4;i++)
+	for(int i=0;i<n;i++)
 	{
 		if(arrival_time[i]<=time && burst_time[i]>0)
 		{   cout<<" ";
@@ -25,7 +36,7 @@ cout<<"\n sequence \n";
 	
 cout<<"\n\n time interval =6\n";
 cout<<"\n sequence \n";
-	for(int i=0;i<4;i++)
+	for(int i=0;i<n;i++)
 	{
 		if(arrival_time[i]<=time && burst_time[i]>0)
 		{
@@ -39,7 +50,7 @@ cout<<"\n sequence \n";
 	}
 	cout<<"\n\n rest of the code first come first serve \n";
 	cout<<"\n sequence \n";
-	for(int i=0;i<4;i++)
+	for(int i=0;i<n;i++)
 	{
 		if(arrival_time[i]<=time && burst_time[i]>0)
 		{   cout<<" ";
