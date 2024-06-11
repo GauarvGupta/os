@@ -1,4 +1,4 @@
-# os
+# Operating Systems
 ## gauravos.cpp
 This project simulates a round-robin scheduling algorithm to manage and optimize the processing times and waiting times of three student processes. Each process (p1, p2, and p3) has a specific processing time and unique student ID. The algorithm prioritizes processes based on their remaining time and student ID when equal.
 
